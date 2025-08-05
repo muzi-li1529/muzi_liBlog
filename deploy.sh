@@ -7,5 +7,5 @@ git init
 git add -A 
 git commit -m 'deploy' 
 # 如果发布到 https://<USERNAME>.github.io/<REPO> 
-git push -f git@https://github.com/muzi-li1529/muzi_liBlog.git master:muzi_liBlog 
+git push -f git@github.com:muzi-li1529/muzi_liBlog.git master:my_pages
 cd -

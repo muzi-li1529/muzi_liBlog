@@ -1,7 +1,7 @@
 module.exports = {
   title:'欢迎来到一个深情程序员的个人空间',
   decription:'这里分享一些个人的学习心得和经验，欢迎交流。',
-  bese:'/muzi_liBlog/',
+  base:'./',
   themeConfig:{
     //标题导航
     nav:[
