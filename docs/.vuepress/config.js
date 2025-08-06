@@ -25,7 +25,7 @@ module.exports = {
         ]
       },
       {
-        title:'我的工具',
+        title:'实用小轮子',
         path:'/tools/watermark',
         collapsable:false,
         children:[
