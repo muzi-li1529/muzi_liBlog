@@ -7,41 +7,41 @@
 
 <script setup>
 import * as THREE from "three";
-import { nextTick,onUnmounted } from "vue";
+import { onMounted, } from "vue";
 
-//创建场景
-const scene = new THREE.Scene();
-//设置背景色
-// scene.background = new THREE.Color(0xc89222);
-const loader = new THREE.TextureLoader();
-loader.load("../../../assets/wartmark.png", (texture) => {
-  scene.background = texture;
-  //  renderer.render(scene, camera);
-});
 
-//创建相机
-const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-// camera.position.z = 5;
-// camera.position.y = 5;
-// camera.position.x = 5;
-camera.position.set(10, 12, 13);
+onMounted(() => {
+  //创建场景
+  const scene = new THREE.Scene();
+  //设置背景色
+  // scene.background = new THREE.Color(0xc89222);
+  const loader = new THREE.TextureLoader();
+  loader.load("../../../assets/wartmark.png", (texture) => {
+    scene.background = texture;
+    //  renderer.render(scene, camera);
+  });
 
-//创建渲染器
-// const renderer = new THREE.WebGLRenderer();
-// renderer.setSize(900, 700);
-const cube = new THREE.Mesh(
-  new THREE.BoxGeometry(2, 2, 2),
-  new THREE.MeshBasicMaterial()
-)
-const cube2 = new THREE.Mesh(
-  new THREE.BoxGeometry(2, 2, 2),
-  new THREE.MeshBasicMaterial({ color: 0xff0000 })
-)
-cube2.position.x = 2;
-let renderer
-nextTick(() => {
-  console.log(document.getElementById("threeIndex"));
-  renderer = new THREE.WebGLRenderer({
+  //创建相机
+  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+  // camera.position.z = 5;
+  // camera.position.y = 5;
+  // camera.position.x = 5;
+  camera.position.set(10, 12, 13);
+
+  //创建渲染器
+  // const renderer = new THREE.WebGLRenderer();
+  // renderer.setSize(900, 700);
+  const cube = new THREE.Mesh(
+    new THREE.BoxGeometry(2, 2, 2),
+    new THREE.MeshBasicMaterial()
+  )
+  const cube2 = new THREE.Mesh(
+    new THREE.BoxGeometry(2, 2, 2),
+    new THREE.MeshBasicMaterial({ color: 0xff0000 })
+  )
+  cube2.position.x = 2;
+
+  const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector(".csv1"),
     antialias: true,
   });

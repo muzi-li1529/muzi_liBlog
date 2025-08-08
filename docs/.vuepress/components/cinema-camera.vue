@@ -11,26 +11,22 @@
 <script setup>
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { onMounted, nextTick } from "vue";
-
-//创建场景
-const scene = new THREE.Scene();
-
-//创建相机
-const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+import { onMounted } from "vue";
 
 
-camera.position.set(-10, 12, 13);
-camera.lookAt(0, 0, 0);
-
-
-//创建网格对象
-const gridHelper = new THREE.GridHelper(10, 8, 0xfff);//参数：大小，网格线数量，中线颜色，其他线颜色
-const cube = new THREE.Mesh(
-  new THREE.BoxGeometry(2, 2, 2),
-  new THREE.MeshBasicMaterial()
-)
 onMounted(() => {
+  //创建场景
+  const scene = new THREE.Scene();
+    //创建相机
+  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.set(-10, 12, 13);
+  camera.lookAt(0, 0, 0);
+  //创建网格对象
+  const gridHelper = new THREE.GridHelper(10, 8, 0xfff);//参数：大小，网格线数量，中线颜色，其他线颜色
+  const cube = new THREE.Mesh(
+    new THREE.BoxGeometry(2, 2, 2),
+    new THREE.MeshBasicMaterial()
+  )
 
   const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector(".csv3"),
