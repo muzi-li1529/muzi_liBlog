@@ -35,16 +35,6 @@ module.exports = {
         ]
       },
       {
-        title:'three.js学习笔记',
-        path:'/three/start',
-        collapsable:false,
-        children:[
-          {title:'开始学习',path:'/three/start'},
-          {title:'轨道控制器原理',path:'/three/cinema-camera'},
-          {title:'几何体+材质',path:'/three/geometry'}
-        ]
-      },
-      {
         title:'实用小轮子',
         path:'/tools/watermark',
         collapsable:false,
