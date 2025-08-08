@@ -8,9 +8,6 @@
 import * as THREE from "three";
 import { onMounted } from "vue";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-
-
-
 onMounted(() => {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -65,13 +62,14 @@ onMounted(() => {
   // console.log(document.querySelector('.geometry'));
 
   document.querySelector('.geometry').appendChild(renderer.domElement);
-  animate();
-});
-
-function animate() {
+  function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
 }
+  animate();
+});
+
+
 
 </script>
 
