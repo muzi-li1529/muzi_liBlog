@@ -1,5 +1,5 @@
 module.exports = {
-  title:'欢迎来到一个深情程序员的个人空间',
+  title:'欢迎进入，共同学习',
   decription:'这里分享一些个人的学习心得和经验，欢迎交流。',
   bese:'/muzi_liBlog/',
   themeConfig:{
@@ -17,7 +17,7 @@ module.exports = {
     //侧边栏
     sidebar: [
       {
-        title:'欢迎学习',
+        title:'欢迎阅览',
         path:'/',
         collapsable:false,//是否折叠
         children:[
@@ -35,7 +35,7 @@ module.exports = {
         ]
       },
       {
-        title:'我的工具',
+        title:'实用小轮子',
         path:'/tools/watermark',
         collapsable:false,
         children:[
