@@ -1,5 +1,5 @@
 <template>
-  <div class="geometry">
+  <div id="geometry">
     <!-- Your content here -->
   </div>
 </template>
@@ -57,15 +57,15 @@ onMounted(() => {
   renderer.setSize(500, 500);
 
   scene.add(mesh, planeMesh);
-  
+
   new OrbitControls(camera, renderer.domElement);
   // console.log(document.querySelector('.geometry'));
-
-  document.querySelector('.geometry').appendChild(renderer.domElement);
+  document.getElementById("geometry").appendChild(renderer.domElement)
+  // document.get('.geometry');
   function animate() {
-  requestAnimationFrame(animate);
-  renderer.render(scene, camera);
-}
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
   animate();
 });
 

@@ -44,10 +44,6 @@ onMounted(() => {
   // console.log(renderer2.domElement);
 
   const controls = new OrbitControls(camera, renderer2.domElement);
-  // controls.addEventListener("change", () => {
-  //   console.log(camera.position);
-
-  // });
   controls.enableDamping = true;
   //渲染场景和相机
   // renderer.render(scene, camera);
