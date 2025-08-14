@@ -1,7 +1,9 @@
 module.exports = {
   title:'欢迎进入，共同学习',
   decription:'这里分享一些个人的学习心得和经验，欢迎交流。',
-  base:'./',
+  // base:'./', //打包放开
+  base:'/',
+  port:8081,
   themeConfig:{
     //标题导航
     nav:[
@@ -31,7 +33,9 @@ module.exports = {
         children:[
           {title:'开始学习',path:'/three/start'},
           {title:'轨道控制器原理',path:'/three/cinema-camera'},
-          {title:'几何体+材质',path:'/three/geometry'}
+          {title:'几何体+材质',path:'/three/geometry'},
+          {title:'射线',path:'/three/raycaster'},
+          {title:'物理运动',path:'/three/physics'},
         ]
       },
       {
@@ -51,6 +55,7 @@ module.exports = {
   theme:'reco',
   chainWebpack (config) {
     config.resolve.alias.set('core-js/library/fn', 'core-js/features');
- }
+ },
+ 
 
 }
