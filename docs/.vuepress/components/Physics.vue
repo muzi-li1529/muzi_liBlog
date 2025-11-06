@@ -40,17 +40,29 @@ onMounted(() => {
     new THREE.SphereGeometry(1, 32, 32),
     new THREE.MeshPhongMaterial({ color: 0xff0000 })
   );
-  sphere.position.set(0, 3, 0);
+  sphere.position.set(0, 10, 0);
   scene.add(sphere);
 
   //创建物理世界
   const world = new CANNON.World();
   world.gravity.set(0, -9.82, 0);
+  //创建物理材料
+  const groundMaterial = new CANNON.Material("groundMaterial")
+   const sphereMaterial = new CANNON.Material("sphereMaterial")
+   const contactMaterial = new CANNON.ContactMaterial(
+    groundMaterial,
+    sphereMaterial,
+    {
+      restitution:1
+    }
+   )
+   world.addContactMaterial(contactMaterial)
   //创建物理地面
   const groundShape = new CANNON.Body(
     {
       mass: 0, //静态物体
-      shape: new CANNON.Plane() //平面形状
+      shape: new CANNON.Plane(), //平面形状
+      material:groundMaterial
     }
   );
   groundShape.quaternion.setFromEuler(-Math.PI / 2, 0, 0)
@@ -59,10 +71,21 @@ onMounted(() => {
   //创建物理小球
   const sphereShape = new CANNON.Body({
     mass: 1, //质量
-    position: sphere.position //位置
+    position: sphere.position, //位置
+    shape:new CANNON.Sphere(1),
+    material:sphereMaterial
   });
-  const sphereShape = new CANNON.Sphere(1); //球形状
-  sphereShape.addShape(sphereShape);
+  // const sphereShape = new CANNON.Sphere(1); //球形状
+  // sphereShape.addShape(sphereShape);
+  world.addBody(sphereShape)
+
+  const updatePhysic = ()=>{
+    world.step(1/60)
+    // console.log(sphereShape.position);
+    sphere.position.copy(sphereShape.position)
+    
+  }
+
 
   //创建轨道控制器
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -72,6 +95,8 @@ onMounted(() => {
   const clock = new THREE.Clock();
   const animate = () => {
     const delta = clock.getDelta();
+    
+    updatePhysic()
     controls.update();
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
