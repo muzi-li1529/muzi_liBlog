@@ -31,7 +31,7 @@ module.exports = {
         path:'/newstudy/start',
         collapsable:false,
         children:[
-          {title:'promise链式调用',path:'/newstudy/start'},
+          {title:'promise',path:'/newstudy/start'},
           // {title:'轨道控制器原理',path:'/three/cinema-camera'},
           // {title:'几何体+材质',path:'/three/geometry'}
         ]
