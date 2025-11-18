@@ -62,3 +62,7 @@ promise.any([任务1，任务2....])   返回一个新任务    任一任务成�
 promise.allSettled([任务1，任务2....])  返回一个新任务   任务全部有结果则成功，数据为带有每个任务状态和数据的数组，有一个无结果则为挂起状态
 
 promise.race([任务1，任务2....])   返回一个新任务  根据第一个完成情况，决定新任务的状态和数据
+
+### async/await
+
+es7中，为了方便promise的使用，官方发布的语法糖，async函数返回一个promise任务，await 等待任务执行，若等待promise任务，则返回promise任务的返回值，若非promise，则转为promise后，返回值
