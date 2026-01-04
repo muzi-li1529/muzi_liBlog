@@ -65,4 +65,4 @@ promise.race([任务1，任务2....])   返回一个新任务  根据第一个�
 
 ### async/await
 
-es7中，为了方便promise的使用，官方发布的语法糖，async函数返回一个promise任务，await 等待任务执行，若等待promise任务，则返回promise任务的返回值，若非promise，则转为promise后，返回值
+es7中，为了方便promise的使用，官方发布的语法糖，async函数返回一个promise任务，await 等待任务执行，若等待promise任务，则返回promise任务的返回值，若非promise，则转为promise后，返回值。若await等待执行的promise任务报错，则会抛出一个错误，适用try...catch处理错误

@@ -19,11 +19,22 @@ module.exports = {
     //侧边栏
     sidebar: [
       {
-        title:'欢迎阅览',
+        title:'欢迎浏览',
         path:'/',
         collapsable:false,//是否折叠
         children:[
           {title:'博客简介',path:'/'}
+        ]
+      },
+      {
+        title:'经验之谈',
+        path:'/person/start',
+        collapsable:false,
+        children:[
+          {title:'工作流梳理',path:'/person/start'},
+          // {title:'网络',path:'/newstudy/internet'},
+          // {title:'轨道控制器原理',path:'/three/cinema-camera'},
+          // {title:'几何体+材质',path:'/three/geometry'}
         ]
       },
       {
@@ -32,6 +43,7 @@ module.exports = {
         collapsable:false,
         children:[
           {title:'promise',path:'/newstudy/start'},
+          {title:'网络',path:'/newstudy/internet'},
           // {title:'轨道控制器原理',path:'/three/cinema-camera'},
           // {title:'几何体+材质',path:'/three/geometry'}
         ]
