@@ -1,8 +1,8 @@
 module.exports = {
   title:'欢迎进入，共同学习',
   decription:'这里分享一些个人的学习心得和经验，欢迎交流。',
-  // base:'./', //打包放开
-  base:'/',
+  base:'./', //打包放开
+  // base:'/',
   port:8081,
   themeConfig:{
     //标题导航
