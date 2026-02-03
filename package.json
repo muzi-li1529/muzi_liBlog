@@ -17,6 +17,7 @@
     "vuepress-theme-reco": "^1.6.17"
   },
   "dependencies": {
+    "caniuse-lite": "^1.0.30001766",
     "cannon": "^0.6.2",
     "element-ui": "^2.15.14",
     "three": "^0.179.1",

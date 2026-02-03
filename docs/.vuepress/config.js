@@ -1,8 +1,8 @@
 module.exports = {
   title:'欢迎进入，共同学习',
   decription:'这里分享一些个人的学习心得和经验，欢迎交流。',
-  // base:'./', //打包放开
-  base:'/',
+  base:'./', //打包放开
+  // base:'/',
   port:8081,
   themeConfig:{
     //标题导航
@@ -71,7 +71,7 @@ module.exports = {
           {title:'电影院选座',path:'/tools/cinema'},
           {title:'e-charts图表双tooltip',path:'/tools/echarts-tooltip'},
           {title:'e-charts图表末端上下拖动及缩放',path:'/tools/echarts-drag-zoom'},
-          {title:'更多好用工具敬请期待',path:'/'}
+          // {title:'更多好用工具敬请期待',path:'/'}
         ]
       }
     ]
