@@ -45,8 +45,8 @@ module.exports = {
           {title:'promise',path:'/newstudy/start'},
           {title:'网络',path:'/newstudy/internet'},
           {title:'模块化',path:'/newstudy/module'},
-          {title:'vue',path:'/newstudy/vueStudy'},
-          // {title:'轨道控制器原理',path:'/three/cinema-camera'},
+          // {title:'vue',path:'/newstudy/vueStudy'},
+          {title:'xss攻击与防御',path:'/newstudy/xsssv'},
           // {title:'几何体+材质',path:'/three/geometry'}
         ]
       },
