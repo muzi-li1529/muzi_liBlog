@@ -1,11 +1,15 @@
 <!-- 电影院选座 -->
+
 ## 电影院选座
-在开发电影原售票等相关页面时，会碰到电影院选座的相关问题，本文采用canvas绘图的方式实现座位渲染，并通过点击事件动态控制作为效果。
+
+在开发电影院售票等相关页面时，会碰到电影院选座的相关问题，本文采用canvas绘图的方式实现座位渲染，并通过点击事件动态控制作为效果。
 
 ### 效果展示
+
 <Cinema />
 
 ### 代码实现
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +63,7 @@ function drawSeats() {
     row.forEach(seat=>{
       ctx.fillStyle = getSeatColor(seat.status);
       ctx.fillRect(seat.x, seat.y, seatSize,seatSize);
-    
+  
     })
   })
 }
@@ -95,3 +99,4 @@ canvas.addEventListener('click', (event) => {
   });
 })
 
+```
